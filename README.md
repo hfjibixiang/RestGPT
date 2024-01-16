@@ -22,10 +22,14 @@ RestGPT adopts an iterative coarse-to-fine online planning framework and uses an
 Modules:
 
 * Planner: generating natural language sub-task for current step.
+* Planner：为当前步骤生成自然语言子任务。
 * API selector: mapping the coarse high-level sub-task to finer API calling plan.
-* Executor: executing the API calling plan.
+* API selector: 将粗略的高级子任务映射到更精细的API调用计划。
+* Executor: executing the API calling plan. 执行API调用计划。
     * Caller: organizing API parameters based on the API plan and API documentation.
+    * Caller: 调用者根据API规划和API文档整理API参数。
     * Parser: generating Python code to parse the API response based on the response schema.
+    * Parser：解析器生成Python代码以根据响应模式解析API响应。
 
 Here is an example of using TMDB movie database to search for the number of movies directed by Sofia Coppola.
 
